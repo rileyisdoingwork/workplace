@@ -1,0 +1,22 @@
+h1 {
+	color: purple;
+font-family: veranda;
+  font-size: 300%;
+}
+
+h2{
+  color :purple;
+  font-family :helvetica;
+}
+
+.byline{
+  font-style: italic;
+  font-weight: bold;
+  color: red;
+}
+
+.intro{
+  font-size: 200%;
+  font-family: roboto;
+  color: #808080;
+}

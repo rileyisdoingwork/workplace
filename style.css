@@ -53,3 +53,42 @@
   box-shadow: 0px 0px 10px;
   padding: 1px;
 }
+
+    /* Carousel container */
+    .carousel {
+        width: 90%;
+        height: 50%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Carousel slides */
+    .carousel .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Navigation buttons */
+    .carousel .prev,
+    .carousel .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10%;
+        height: 10%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        text-align: center;
+        line-height: 2%;
+        cursor: pointer;
+    }
+
+    .carousel .prev {
+        left: 5%;
+    }
+
+    .carousel .next {
+        right: 5%;
+    }

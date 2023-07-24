@@ -1,29 +1,28 @@
-var slideIndex = 0;
-        var slides = document.getElementsByClassName("slide");
 
-        function showSlide(n) {
-            slideIndex = n;
 
-            if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-            } else if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            }
+        let slideIndex = 1;
+showSlides(slideIndex);
 
-            for (var i = 0; i < slides.length; i++) {
-                slides[i].style.transform = "translateX(" + (-slideIndex * 100) + "%)";
-            }
-        }
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-        function nextSlide() {
-            showSlide(slideIndex + 1);
-        }
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-        function prevSlide() {
-            showSlide(slideIndex - 1);
-        }
-
-        document.querySelector(".prev").addEventListener("click", prevSlide);
-        document.querySelector(".next").addEventListener("click", nextSlide);
-
-        showSlide(slideIndex);
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}

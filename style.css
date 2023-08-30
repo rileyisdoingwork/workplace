@@ -3,6 +3,11 @@
   background-color:#c5c1c1;
 }
 
+.title {
+  float: right;
+  
+}
+
 .nav-list{
   background:gold;
   box-shadow:0px 0px 10px;
@@ -144,6 +149,14 @@ display: inline-block;
   background-color:rgb(218, 159, 50);
   font-size: 50px;
   display: inline-block;
+}
+
+.maptitle {
+  font-size: 40px;
+}
+
+.mapwords {
+  font-size:30px;
 }
 
 .footer {

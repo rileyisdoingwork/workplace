@@ -6,28 +6,110 @@
       <link href="style.css" rel="stylesheet" type="text/css">
        <title>bobs burgers</title>
    </head>
-  <body>
-    <header>
-      <navbar>
-        <ul class="nav-list">
-          <div class="col-7">
-           <li class="nav-item">
-            <a href="digiwork.html"><img class="logo" src="hamburger.png" height="100px" alt="logo"></a>              
-            </li>
+   <body onload="plusSlides(1)">
+    <nav>
+      <div class="nav-list">
+        <div class="col-3">
+         <div class="nav-item">
+          <a href="digiwork.html"><img class="logo" src="hamburger.png" height="60vw" alt="logo">
+          <div class="title">
+            <b></b>
           </div>
-          <div class="col-2">
-            <li class="nav-item">
-              <a href="map.html">stores</a>
-            </li>
+          </a>              
+         </div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-3">
+          <div class="nav-item">
+            <a href="map.html">stores</a>
           </div>
-          <div class="col-2">
-            <li class="nav-item">
-              <a href="order.html">order</a>
-            </li>
+        </div>
+        <div class="col-3">
+          <div class="nav-item">
+            <a href="order.html">order</a>
           </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="col-10">
+      <div class="grid-container">
+        <!-- First row -->
+        <select class="dropdown" onchange="updateSelectedOptions(this)">
+            <option value="option1">Bobs cheeseburger</option>
+            <option value="option2">Bobs double cheeseburger</option>
+            <option value="option3"></option>
+        </select>
+        <select class="dropdown" onchange="updateSelectedOptions(this)">
+            <option value="option4">Chicken burger</option>
+            <option value="option5">Double Chicken burger</option>
+            <option value="option6"></option>
+        </select>
+        <select class="dropdown" onchange="updateSelectedOptions(this)">
+            <option value="option7">Vegetarian burger</option>
+            <option value="option8">Tofu burger</option>
+            <option value="option9"></option>
+        </select>
+         <!-- Second row -->
+         <select class="dropdown" onchange="updateSelectedOptions(this)">
+          <option value="option10">Crinkle cut fries</option>
+          <option value="option11">Curly fries</option>
+          <option value="option12"></option>
+      </select>
+      <select class="dropdown" onchange="updateSelectedOptions(this)">
+          <option value="option13">Hashbrown</option>
+          <option value="option14">Potato bites</option>
+          <option value="option15"></option>
+      </select>
+      <select class="dropdown" onchange="updateSelectedOptions(this)">
+          <option value="option16">Chicken nuggets</option>
+          <option value="option17">Chicken bites</option>
+          <option value="option18"></option>
+      </select>
+      <!-- Third row -->
+      <select class="dropdown" onchange="updateSelectedOptions(this)">
+        <option value="option19">Cola drink</option>
+        <option value="option20">Sprite drink</option>
+        <option value="option21"></option>
+    </select>
+    <select class="dropdown" onchange="updateSelectedOptions(this)">
+        <option value="option22">Fanta drink</option>
+        <option value="option23">Raspberry drink</option>
+        <option value="option24"></option>
+    </select>
+    <select class="dropdown" onchange="updateSelectedOptions(this)">
+        <option value="option25">Chocolate ice cream sundae</option>
+        <option value="option26">caramel ice cream sundae</option>
+        <option value="option27"></option>
+    </select>
+      </div>
+ 
+    </div>
+
+    <div class="col-2">
+    <div id="selected-options">
+        <h2>Order list:</h2>
+        <ul id="selected-list" onclick="removeSelectedOption(event)">
         </ul>
-      </navbar>
-</header>
-  
-  
-</body>
+        <ul id="selected-list">
+        </ul>
+    </div>
+  </div>
+
+  <div class="col-2">
+  <button id="order-button" onclick="placeOrder()">Order</button>
+  </div>
+
+  <div class="col-12">
+  <button id="clear-button" onclick="clearSelectedOptions()">Clear Selected Options</button>
+  </div>
+
+  <div class="col-12">
+    <hr class="solid">
+    <footer class="footer">
+      <p>Thank you for savoring the flavors of Bob's Burgers! At our fast-food haven, we take pride in crafting mouthwatering burgers that ignite your taste buds with every bite. Our commitment to quality ingredients and delectable recipes ensures that each visit to Bob's Burgers is a memorable, savory experience. We're delighted to serve you, and we look forward to satisfying your cravings time and time again. Your satisfaction is our top priority, and we're always here to make your burger dreams come true. Join us today and discover why Bob's Burgers is the ultimate destination for burger enthusiasts.</p>
+    </footer>
+  </div>
+
+ </body>
+</html>
